@@ -4,7 +4,7 @@ function convertToBinary() {
 
   if (isNaN(number)) {
     document.getElementById("result").textContent = "数値を正しく入力してください。";
-    return;
+    return true;
   }
 
   const binary = number.toString(2);
