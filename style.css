@@ -1,34 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   padding: 2em;
-  background-color: #ffc0cb;
+  background: linear-gradient(135deg, #ffe4e1, #ffc0cb);
+  color: #333;
 }
 
 input {
-  padding: 0.5em;
-  font-size: 1em;
-  width: 200px;
+  padding: 0.6em;
+  font-size: 1.1em;
+  width: 220px;
+  border: 2px solid #ff99aa;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+input:focus {
+  box-shadow: 0 0 5px #ff99aa;
 }
 
 button {
-  padding: 0.5em 1em;
-  font-size: 1em;
+  padding: 0.6em 1.2em;
+  font-size: 1.1em;
   margin-left: 1em;
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+  background-color: #ff4f75;
+  transform: scale(1.05);
 }
 
 #resultDisp {
-  margin-top: 1em;
-  font-size: 1.2em;
+  margin-top: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
-  color: #dc143c;
+  color: #b22222;
 }
 
 #historyList {
-  margin-top: 1em;
-  padding-left: 20px;
+  margin-top: 2em;
+  padding-left: 0;
+  list-style: none;
 }
 #historyList li {
-  color: #dc143c;
+  background-color: #fff0f5;
+  margin: 0.5em auto;
+  padding: 0.6em 1em;
+  max-width: 300px;
+  border-left: 6px solid #ff6f91;
+  border-radius: 6px;
   font-family: monospace;
+  color: #b22222;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
