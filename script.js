@@ -10,7 +10,6 @@ function convertToBinary() {
   const binary = number.toString(2);
   document.getElementById("result").value = binary;
   document.getElementById("resultDisp").textContent = `2進数：${binary}`;
-  return true;
   
   // 履歴追加
   const historyList = document.getElementById("historyList");
@@ -22,4 +21,5 @@ function convertToBinary() {
   while (historyList.children.length > 10) {
     historyList.removeChild(historyList.firstChild);
   }
+  return true;
 }
