@@ -4,44 +4,55 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   padding: 2em;
-  background: linear-gradient(135deg, #ffe4e1, #ffc0cb);
-  color: #333;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: #e0e6f0;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 input {
   padding: 0.6em;
   font-size: 1.1em;
   width: 220px;
-  border: 2px solid #ff99aa;
+  border: 2px solid #5dade2; /* 明るい水色 */
   border-radius: 8px;
   outline: none;
-  transition: box-shadow 0.2s;
+  background-color: #162a4a;
+  color: #e0e6f0;
+  transition: box-shadow 0.2s, border-color 0.3s;
+}
+input::placeholder {
+  color: #a0a8bf;
 }
 input:focus {
-  box-shadow: 0 0 5px #ff99aa;
+  border-color: #85c1e9;
+  box-shadow: 0 0 8px #85c1e9;
 }
 
 button {
   padding: 0.6em 1.2em;
   font-size: 1.1em;
   margin-left: 1em;
-  background-color: #ff6f91;
+  background-color: #2980b9; /* 濃い水色 */
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(41,128,185,0.7);
 }
 button:hover {
-  background-color: #ff4f75;
+  background-color: #5499c7;
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(84,153,199,0.9);
 }
 
 #resultDisp {
   margin-top: 1.5em;
   font-size: 1.3em;
   font-weight: bold;
-  color: #b22222;
+  color: #a9cce3; /* 明るい青 */
+  text-shadow: 0 0 5px #5499c7;
 }
 
 #historyList {
@@ -50,16 +61,16 @@ button:hover {
   list-style: none;
 }
 #historyList li {
-  background-color: #fff0f5;
+  background-color: #1b2a47;
   margin: 0.5em auto;
   padding: 0.6em 1em;
   max-width: 300px;
-  border-left: 6px solid #ff6f91;
+  border-left: 6px solid #5499c7;
   border-radius: 6px;
   font-family: monospace;
-  color: #b22222;
+  color: #d6dbf7;
   text-align: left;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 /* スマホなど幅600px以下の場合 */
@@ -69,24 +80,23 @@ button:hover {
   }
 
   input {
-    width: 100%;       /* 横幅いっぱいに広げる */
-    font-size: 1.2em;  /* 少し大きくしてタッチしやすく */
+    width: 100%;
+    font-size: 1.2em;
   }
 
   button {
     margin-left: 0;
-    margin-top: 1em;   /* ボタンを入力の下に */
-    width: 100%;       /* 横幅いっぱい */
+    margin-top: 1em;
+    width: 100%;
     font-size: 1.2em;
   }
 
   #historyList li {
-    max-width: 100%;   /* 幅いっぱいに */
-    font-size: 1.1em;  /* 少し大きめに */
+    max-width: 100%;
+    font-size: 1.1em;
   }
 
   #resultDisp {
     font-size: 1.4em;
   }
 }
-
