@@ -1,6 +1,6 @@
 function convertToBinary() {
   const input = document.getElementById("decimalInput").value;
-  const number = parseFloat();
+  const number = parseFloat(input);
 
   if (isNaN(number)) {
     document.getElementById("result").textContent = "数値を正しく入力してください。";
