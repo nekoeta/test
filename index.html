@@ -2,15 +2,14 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>メモアプリ</title>
+  <title>10進→2進変換アプリ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>メモアプリ_ローカルで編集</h1>
-  <textarea id="memo" rows="10" cols="30"></textarea>
-  <br>
-  <button onclick="saveMemo()">保存</button>
-
+  <h1>10進数 → 2進数 変換アプリ</h1>
+  <input type="number" id="decimalInput" placeholder="10進数を入力">
+  <button onclick="convertToBinary()">変換</button>
+  <p id="result"></p>
   <script src="script.js"></script>
 </body>
 </html>
