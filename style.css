@@ -61,3 +61,32 @@ button:hover {
   text-align: left;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+/* スマホなど幅600px以下の場合 */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 1em;
+  }
+
+  input {
+    width: 100%;       /* 横幅いっぱいに広げる */
+    font-size: 1.2em;  /* 少し大きくしてタッチしやすく */
+  }
+
+  button {
+    margin-left: 0;
+    margin-top: 1em;   /* ボタンを入力の下に */
+    width: 100%;       /* 横幅いっぱい */
+    font-size: 1.2em;
+  }
+
+  #historyList li {
+    max-width: 100%;   /* 幅いっぱいに */
+    font-size: 1.1em;  /* 少し大きめに */
+  }
+
+  #resultDisp {
+    font-size: 1.4em;
+  }
+}
+
